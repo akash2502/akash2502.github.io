@@ -6,16 +6,12 @@
 //Slider CSS starts
 function selectStep(slide)
 {
-    
-    $(".progress-selected").animate({ marginLeft: (slide-1)*130+'px'},500);
-    
-    
-           
-            $(".content-switcher").hide();
-            
-            $("#Content"+slide).show();
-            
-   }// Slider CSS Ends
+   
+ 
+    $(".content-switcher").hide();
+    $("#Content"+slide).show();
+}        
+   // Slider CSS Ends
    
 //DROP-DOWN MENU CSS starts
 
@@ -31,6 +27,17 @@ function selectStep(slide)
             selectStep(slide);
       });
    });
+  
+
+//changing background color when clicked
+   function changeColor(id) {    
+        var tabs = document.getElementsByClassName('item-number')
+        for (var i = 0; i < tabs.length; ++i) {
+            var item = tabs[i];
+            item.style.backgroundColor = (item.id == id) ? "#f8f8f8" : "silver";
+        }
+    }
+
   
    //DROP-DOWN MENU CSS ends
          
