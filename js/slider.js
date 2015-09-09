@@ -4,32 +4,13 @@
  * and open the template in the editor.
  */
 //Slider CSS starts
-function selectStep(slide){
-             if(slide == 1)
-             {
-                 
-                $(".progress-selected").animate({ marginLeft: '2px'},500);
-                 $(".content-switcher").animate({marginLeft: '300px'},0);
-                 $(".content-switcher").animate({marginLeft: '0px'},500);
-                
-             }
-             else if(slide == 2)
-             {
-
-                 $(".progress-selected").animate({ marginLeft: '130px'},500);
-                 $(".content-switcher").animate({marginLeft: '300px'},0);
-                 $(".content-switcher").animate({marginLeft: '0px'},500);
-             }
-            else if(slide == 3)
-             {
-
-
-                 $(".progress-selected").animate({marginLeft: '280px'},500);
-                  $(".content-switcher").animate({marginLeft: '300px'},0);
-                 $(".content-switcher").animate({marginLeft: '0px'},500);
-                
-             }
-             
+function selectStep(slide)
+{
+    
+    $(".progress-selected").animate({ marginLeft: (slide-1)*130+'px'},500);
+    
+    
+           
             $(".content-switcher").hide();
             
             $("#Content"+slide).show();
